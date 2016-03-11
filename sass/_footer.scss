@@ -1,3 +1,23 @@
-footer {
-	clear: both;
+footer div.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background: $dark;
+	color: $light;
+	ul {
+		list-style: none;
+		display: flex;
+		flex-direction: row;
+		padding-right: 40px;
+		li {
+			padding: 40px 10px;
+		}
+	}
+	a {
+		color: $light;
+	}
+	p {
+		padding-left: 40px;
+	}
 }

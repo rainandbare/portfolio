@@ -3,6 +3,7 @@
 	float: left;
 	display: flex;
 	flex-direction: row;
+	align-items: center;
 }
 	
 .skill:nth-of-type(2n) .skillImage{
@@ -16,8 +17,10 @@
 
 
 div.svgImage{
-	width: 60px;
-	background: $accent;
+	width: 80px;
+    background: $accent;
+    margin: 30px;
+    padding: 10px;
 }
 
 .interests {

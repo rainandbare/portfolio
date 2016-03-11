@@ -59,8 +59,8 @@
               <div class="portfolioInfo">
                 <h4><?php the_title(); ?></h4>
                 <p><?php the_content(); ?></p>
-                <p><?php the_field('github_link'); ?></p>
-                <p><?php the_field('live_link'); ?></p>
+                <button class="git" href="<?php the_field('git_link'); ?>"> <?php the_field('git_placeholder'); ?></button>
+                <button class="live" href="<?php the_field('live_link'); ?>"> <?php the_field('live_placeholder'); ?></button>
                     <?php if( have_rows('tech_used') ): ?>
                       <?php while( have_rows('tech_used') ) : the_row(); ?>
                       <p><?php the_sub_field('tech'); ?></p>
@@ -93,7 +93,7 @@
           <section class="skill" id="<?php echo $post->post_name; ?>">
             <div class="skillInfo">
               <h4><?php the_title(); ?></h4>
-              <p><?php the_content(); ?></p>
+              <?php the_content(); ?>
             </div>
             <div class="skillImage">
               <div class="svgImage">
@@ -145,8 +145,8 @@
     <section class="contact">
     <h2><?php the_field('contact_title'); ?></h2>
       <div class="contactContent">
-        
         <div class="headshot" style="background-image: url(<?php the_field('contact_image'); ?> );">
+          <div class="headshot-overlay"></div>
         </div>
         <div class="form">
             <h3> <?php the_field('contact_intro'); ?></h3>

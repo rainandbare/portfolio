@@ -1,6 +1,12 @@
 <footer>
   <div class="container">
-    <p>&copy; HackerYou <?php echo date('Y'); ?></p>
+    <p>&copy; Suzette McCanny <?php echo date('Y'); ?></p>
+    <nav class="socialNav">
+      	<?php wp_nav_menu( array(
+      'container' => false,
+      'theme_location' => 'social'
+    )); ?>
+    </nav>
   </div>
 </footer>
 

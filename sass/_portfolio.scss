@@ -1,6 +1,15 @@
 
 section.portfolio {
 	width: 100%;
+	h4 {
+		font-size: $largetext;
+		padding: 0px 0px 20px 0px;
+		text-transform: uppercase;
+	}
+	p, h4 {
+		padding: 0px 0px 20px 0px;
+	}
+
 }
 section.piece {
 	display: flex;
@@ -22,18 +31,39 @@ section.piece {
 	}
 	&:nth-of-type(3n+1){
 		.portfolioInfo {
-			background: $accent;
+			background: $middle;
+			h4 {
+				color: $accent;
+			}
+			p {
+				color: $light;
+			}
 		}
 	}
 	&:nth-of-type(3n+2){
 		.portfolioInfo {
 			background: $light;
+			h4 {
+				color: $middle;
+			}
+			p {
+				color: $dark;
+			}
 		}
 
 	}
 	&:nth-of-type(3n+3){
 		.portfolioInfo {
 			background: $dark;
+			h4, button {
+				color: $light;
+			}
+			p {
+				color: $middle;
+			}
+			button {
+				border: 1px solid $light;
+			}
 		}
 	}
 	&:nth-of-type(2n+1){

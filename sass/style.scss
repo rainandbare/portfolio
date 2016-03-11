@@ -15,11 +15,14 @@
 $robo: 'Roboto', serif;   
 $source-code: 'Source Code Pro', sans-serif;
 
-$accent: #43B9CA;
-$accent-seethrough: RGBA(249, 8, 142, 0.6);
+$accent: RGBA(224, 27, 120, 1);
+$accent-seethrough: RGBA(226, 33, 99, 0.8);
+$accentLight: RGBA(235, 99, 148, 1);
+$accentLight-seethrough: RGBA(235, 99, 148, 0.8);
+$accentDark: RGBA(189, 27, 93, 1);
 $dark: black;
 $light: white;
-$middle: grey;
+$middle: RGBA(97, 97, 97, 1);
 
 $bigpad: 50px;
 $mediumpad: 30px;
@@ -90,7 +93,8 @@ h3 {
 @import 'about';
 @import 'portfolio';
 @import 'skills';
-@import 'contact'
+@import 'contact';
+@import 'footer'
 
 
 
