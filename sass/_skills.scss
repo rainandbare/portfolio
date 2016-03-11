@@ -1,0 +1,25 @@
+.skill {
+	width: 50%;
+	float: left;
+	display: flex;
+	flex-direction: row;
+}
+	
+.skill:nth-of-type(2n) .skillImage{
+	order: -1;
+
+}
+.skill:nth-of-type(2n+1) {
+	text-align: right;
+	justify-content: flex-end;
+}
+
+
+div.svgImage{
+	width: 60px;
+	background: $accent;
+}
+
+.interests {
+	padding-top: 40px;
+}

@@ -287,6 +287,8 @@ function hackeryou_get_thumbnail_url(){
 	return $imageURL;
 }
 
+
+
 function sm_get_image_url() {
 	if (has_post_thumbnail( $post->ID ) ): 
     global $image;

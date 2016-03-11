@@ -8,23 +8,50 @@
 */
 
 @import 'normalize';
-@import 'typography';
-@import 'navigation';
-@import 'sidebar';
-@import 'comments';
-@import 'footer';
+
+// google fonts
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,700|Source+Code+Pro:400,200);
+
+$robo: 'Roboto', serif;   
+$source-code: 'Source Code Pro', sans-serif;
+
+$accent: #43B9CA;
+$accent-seethrough: RGBA(249, 8, 142, 0.6);
+$dark: black;
+$light: white;
+$middle: grey;
+
+$bigpad: 50px;
+$mediumpad: 30px;
+$smallpad: 10px;
+
+$largetext: 2.7rem;
+$mediumtext: 1.7rem;
+$smalltext: 1.4rem;
+
+
+
+
+// @import 'typography';
+
+// @import 'sidebar';
+// @import 'comments';
+// @import 'footer';
 /*
 ====================================
 Default Styling
 ====================================
 */
 
+
+
+
 img {
 	max-width: 100%;
 }
 
 body {
-	color: #333;
+	font-family: $robo;
 }
 
 .container {
@@ -32,16 +59,38 @@ body {
 	margin: 0 auto;
 }
 
-.content {
-	float: left;
-	width: 65%;
-	margin-right: 5%;
+h1, h2, h3 {
+	text-transform: uppercase;
 }
 
-.full {
-	width: 100%;
+h1 {
+	font-size: 8rem;
+	letter-spacing: 4px;
+	color: white;
+	padding: 190px 0px 20px 0px;
 }
 
+h2 {
+	font-size: $largetext;
+	color: black;
+	font-weight: 400;
+}
+
+h3 {
+	color: $accent;
+	font-size: $mediumtext;
+	font-family: $source-code;
+	font-weight: 200;
+	text-align: center;
+
+}
+
+@import 'navigation';
+@import 'hero';
+@import 'about';
+@import 'portfolio';
+@import 'skills';
+@import 'contact'
 
 
 

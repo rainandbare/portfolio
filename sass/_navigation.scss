@@ -1,14 +1,28 @@
-ul.menu {
-	margin: 0;
-	padding: 0;
-	li {
-		display: inline;
-		margin-right: 10px;
-		a {
-			color: #333;
-			padding: 10px;
-			background: #333;
-			color: white;
+nav.mainNav {
+	.logo {
+		width: 50px;
+		padding: 14px 0 10px 20px;
+
+	}
+	background: $dark;
+	font-family: $source-code;
+	.container, ul#menu-main-menu, ul#menu-social-menu {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		ul {
+			list-style: none;
+		}
+	}
+	a {
+		color: $light;
+		text-transform: uppercase;
+	}
+	ul#menu-main-menu, ul#menu-social-menu {
+		li {
+			padding: 0px 10px;
 		}
 	}
 }
+
