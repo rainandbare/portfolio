@@ -2,12 +2,26 @@
 section.portfolio {
 	width: 100%;
 	h4 {
-		font-size: $largetext;
+		font-size: 2.5rem;
 		padding: 0px 0px 20px 0px;
 		text-transform: uppercase;
+		font-family: $source-code;
 	}
 	p, h4 {
 		padding: 0px 0px 20px 0px;
+	}
+	button {
+		background: $accent;
+		color: $light;
+		border: none;
+		padding: 10px;
+		font-size: 3rem;
+		text-transform: uppercase;
+	}
+	p.skills {
+		text-transform: uppercase;
+		font-style: italic;
+		font-family: $source-code;
 	}
 
 }
@@ -16,6 +30,22 @@ section.piece {
 	flex-direction: row;
 	.portfolioInfo{
 		padding: 10% 5%;
+		position: relative;
+		&:after{
+			content: '';
+			display: block;
+			position: absolute;
+			background: transparent;
+			right: -23%;
+			top:0;
+			width: 0; 
+			height: 0; 
+			border-width: 80px;
+			border-style: solid;
+			border-top-color: transparent;
+			border-bottom-color: transparent;
+
+		}
 	}
 	.portfolioImage {
 		background-repeat: none;
@@ -31,44 +61,72 @@ section.piece {
 	}
 	&:nth-of-type(3n+1){
 		.portfolioInfo {
-			background: $middle;
+			background-color: currentColor;
+			color: $middle;
+			&:after{
+				border-right-color: transparent;
+				border-left-color: currentColor;
+			}
 			h4 {
-				color: $accent;
+				color: $dark;
 			}
 			p {
 				color: $light;
+			}
+			p.skills {
+				color: $accentLight;
 			}
 		}
 	}
 	&:nth-of-type(3n+2){
 		.portfolioInfo {
-			background: $light;
+			background-color: currentColor;
+			color: $light;
+			&:after{
+				border-right-color: transparent;
+				border-left-color: currentColor;
+			}
 			h4 {
 				color: $middle;
 			}
 			p {
 				color: $dark;
 			}
+			p.skills {
+				color: $accentLight;
+			}
 		}
 
 	}
 	&:nth-of-type(3n+3){
 		.portfolioInfo {
-			background: $dark;
+			background-color: currentColor;
+			color: $dark;
+			&:after{
+				border-right-color: transparent;
+				border-left-color: currentColor;			
+			}
 			h4, button {
 				color: $light;
 			}
 			p {
 				color: $middle;
 			}
-			button {
-				border: 1px solid $light;
+			p.skills {
+				color: $accentLight;
 			}
 		}
 	}
 	&:nth-of-type(2n+1){
 		.portfolioInfo {
 			order: -1;
+		}
+	}
+	&:nth-of-type(2n){
+		.portfolioInfo::after {
+			left:-23%;	
+			border-right-color: currentColor;
+			border-left-color: transparent;
 		}
 	}
 }

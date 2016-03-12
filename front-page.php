@@ -1,22 +1,28 @@
 <?php get_header();  ?>
 
 <?php $thumb_id = get_post_thumbnail_id(); $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true); ?>
-<header class="hero" style="background-image: url('<?php echo $thumb_url_array[0]; ?>')">
-  <div class="hero-overlay">
-   <!--  <div class="hero-content"> -->
+  <div class="hero">
+ <header class="hero" style="background-image: url('<?php echo $thumb_url_array[0]; ?>')">
+  
+   <div class="hero-overlay">
       <h1><?php bloginfo( 'name' ); ?></h1>
       <h2 class="subtitle"><?php bloginfo( 'description' ); ?></h2>
-      <button class="enter"> <?php the_field('enter'); ?> </button>
- <!--    </div> -->
-  </div> 
+      <a class="enter" href="#about"><?php the_field('enter'); ?></a> 
+  </div>
+   
+ 
+  
 </header>
+   </div>
+   <div class="hero-placeholder">
+  </div>
 
 <?php get_template_part('partial', 'nav'); ?>
 
 <main>    
   
   <!-- about section -->
-  <section class="about">
+  <section class="about" id='about'>
     <div class="container">
       <h3><?php the_field('about_title'); ?></h3>
         <!-- new about query -->
@@ -39,7 +45,7 @@
 
 
     <!-- portfolio section -->
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
           <!-- new portfolio query -->
           <?php
             $portfolioQuery = new WP_Query(
@@ -54,18 +60,21 @@
             <?php while ($portfolioQuery->have_posts()) : $portfolioQuery->the_post(); ?>
               <!-- individual portfolio piece -->
             <section class = "piece" id="<?php echo $post->post_name; ?>">
+              <!-- picture -->
               <?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
               <div class="portfolioImage" style="background-image: url('<?php echo $url; ?>')"></div>
+              
+              <!-- info -->
               <div class="portfolioInfo">
                 <h4><?php the_title(); ?></h4>
-                <p><?php the_content(); ?></p>
-                <button class="git" href="<?php the_field('git_link'); ?>"> <?php the_field('git_placeholder'); ?></button>
-                <button class="live" href="<?php the_field('live_link'); ?>"> <?php the_field('live_placeholder'); ?></button>
-                    <?php if( have_rows('tech_used') ): ?>
+                <?php the_content(); ?>
+                 <p class="skills"><?php if( have_rows('tech_used') ): ?>
                       <?php while( have_rows('tech_used') ) : the_row(); ?>
-                      <p><?php the_sub_field('tech'); ?></p>
+                      <?php the_sub_field('tech'); ?>
                     <?php endwhile; ?>
-                    <?php endif; ?>
+                    <?php endif; ?></p>
+                <button class="git" href="<?php the_field('git_link'); ?>"><?php the_field('git_placeholder'); ?></button>
+                <button class="live" href="<?php the_field('live_link'); ?>"> <?php the_field('live_placeholder'); ?></button>
               </div>
             </section>
             <?php endwhile; ?>
@@ -142,7 +151,7 @@
 
 
     <!-- Contact  -->
-    <section class="contact">
+    <section class="contact" id="contact">
     <h2><?php the_field('contact_title'); ?></h2>
       <div class="contactContent">
         <div class="headshot" style="background-image: url(<?php the_field('contact_image'); ?> );">

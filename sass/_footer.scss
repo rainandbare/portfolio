@@ -1,9 +1,11 @@
-footer div.container {
+footer {
+background: $dark;
+div.container {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	background: $dark;
+	
 	color: $light;
 	ul {
 		list-style: none;
@@ -20,4 +22,5 @@ footer div.container {
 	p {
 		padding-left: 40px;
 	}
+}
 }

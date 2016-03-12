@@ -30,7 +30,7 @@ section.contact {
 			bottom: 0;
 			right: 0;
 			left: 0;
-			background: $accentLight-seethrough;
+			background: RGBA(235,99,148,0.1);
 		}
 	}
 	.form {
@@ -50,9 +50,15 @@ section.contact {
 			color: white;
 			margin: 30px 0px;
 			height: 20px;
+			width: 100%;
 		}
 		input[type=submit]{
-			border-top: 1px white solid;
+			border-top: 1px #fff solid;
+    		padding: 20px 0px 40px;
+    		width: 25%;
+    		margin: 0 auto;
+    		text-align: center;
+    		float: right;
 
 		}
 	}

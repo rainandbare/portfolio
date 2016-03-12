@@ -57,6 +57,10 @@ body {
 	font-family: $robo;
 }
 
+section.about, div.skills-interests {
+	background: white;
+}
+
 .container {
 	max-width: 1200px;
 	margin: 0 auto;
@@ -71,6 +75,7 @@ h1 {
 	letter-spacing: 4px;
 	color: white;
 	padding: 190px 0px 20px 0px;
+	text-shadow: -6px 3px 1px black;
 }
 
 h2 {
@@ -81,9 +86,9 @@ h2 {
 
 h3 {
 	color: $accent;
-	font-size: $mediumtext;
+	font-size: 2.5rem;
 	font-family: $source-code;
-	font-weight: 200;
+	font-weight: 400;
 	text-align: center;
 
 }
