@@ -25,5 +25,6 @@ $(window).scroll(function() {
 }
 
 function smoothScroll(){
-
+	$('header a').smoothScroll();
+	$('nav.mainNav a').smoothScroll();
 }
