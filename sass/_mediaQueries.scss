@@ -1,9 +1,29 @@
 
 
+@media (max-width: 1200px) {
+	section.piece {
+		.portfolioInfo:after {
+    	right: -23%;
+	}
+		&:nth-of-type(2n){
+		.portfolioInfo::after {
+			left:-23%;	
+			border-right-color: currentColor;
+			border-left-color: transparent;
+			}
+		}	
+	}
+}
+
+
+
 @media (max-width: 660px) {
 	h1 {
     	font-size: 5rem;
-    	padding: 0px 0 20px;	
+    	padding: 78px 0 20px;	
+	}
+	.hero-overlay a.enter {
+		margin-bottom: 20px;
 	}
 	header.hero {
     	background-position: 75%;
@@ -79,7 +99,7 @@
 		.skillImage {
 			width: 20%;
 		}
-		}
+	}
 		.skill:nth-of-type(2n) .skillInfo{
 			padding-left: 70px;
 			margin-right: auto;
@@ -108,12 +128,6 @@
 	div.hero-placeholder {
 		height: auto;
 		height: 75vh;
-	}
-	h1 {
-    	padding: 78px 0 20px;	
-	}
-	.hero-overlay a.enter {
-		margin-bottom: 20px;
 	}
 	// main {
 	// 	width: 100%;

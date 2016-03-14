@@ -55,6 +55,7 @@ img {
 
 body {
 	font-family: $robo;
+	background-color: black;
 
 }
 
@@ -62,8 +63,12 @@ section.about, div.skills-interests {
 	background: white;
 }
 
+section.portfolio {
+	background: white;
+}
+
 .container {
-	max-width: 1200px;
+	max-width: 1300px;
 	margin: 0 auto;
 }
 
@@ -91,7 +96,10 @@ h3 {
 	font-family: $source-code;
 	font-weight: 400;
 	text-align: center;
-
+	text-transform: lowercase;
+}
+.form h3 {
+	text-transform: uppercase;
 }
 
 @import 'navigation';

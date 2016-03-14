@@ -35,16 +35,20 @@ section.portfolio {
 section.piece {
 	display: flex;
 	flex-direction: row;
+	margin: -2px 0px;
 	.portfolioInfo{
 		padding: 100px;
-		padding: 60px 5%;
+		padding: 80px 5%;
 		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 		&:after{
 			content: '';
 			display: block;
 			position: absolute;
 			background: transparent;
-			right: -23%;
+			right: -18%;
 			top:0;
 			width: 0; 
 			height: 0; 
@@ -59,6 +63,7 @@ section.piece {
 		background-repeat: none;
 		background-position: center;
 		background-size: cover; 
+		min-height: 600px;
 	}
 	.portfolioImage, .portfolioInfo {
 		width: 50%;
@@ -131,8 +136,11 @@ section.piece {
 		}
 	}
 	&:nth-of-type(2n){
+		.portfolioInfo {
+			text-align: right;
+		}
 		.portfolioInfo::after {
-			left:-23%;	
+			left:-18%;	
 			border-right-color: currentColor;
 			border-left-color: transparent;
 		}

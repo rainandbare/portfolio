@@ -31,6 +31,12 @@ nav.mainNav {
 			padding: 0px 10px;
 		}
 	}
+  ul#menu-main-menu li {
+    padding: 0px 36px;
+    &:first-of-type{
+      padding-left: 0px;
+    }
+  }
 }
 
 nav.mainNavScrolled {

@@ -1,6 +1,7 @@
 section.contact {
+	background: $dark;
 	h2{
-		background: $middle;
+		background: $dark;
 		color: $light;
 		padding: 80px 0px 60px;
 		text-align: center;
@@ -22,6 +23,7 @@ section.contact {
 	.headshot {
 		width: 40%;
 		height: auto;
+		min-height: 780px;
 		background-size: cover;
 		background-position: center;
 		position: relative;
@@ -35,9 +37,13 @@ section.contact {
 		}
 	}
 	.form {
-		padding: 50px;
+		margin: 0 auto;
+		padding: 0px 50px;
+		display: flex;
+		height: 100%;
+		flex-flow: column wrap;
 		h3 {
-			margin: 30px 0px;
+			margin: 0px 0px 30px;
 		}
 		p {
 			color: white;
@@ -103,6 +109,7 @@ section.contact {
 		}
 	}
 }
+
 
 div.wpcf7-response-output {
 	border: 2px solid black;

@@ -68,8 +68,12 @@
                       <?php the_sub_field('tech'); ?>
                     <?php endwhile; ?>
                     <?php endif; ?></p>
+
+                <div class="buttons">   
                 <button class="git" href="<?php the_field('git_link'); ?>"><?php the_field('git_placeholder'); ?></button>
-                <button class="live" href="<?php the_field('live_link'); ?>"> <?php the_field('live_placeholder'); ?></button>
+                <button class="live" href="<?php the_field('live_link'); ?>"> <?php the_field('live_placeholder'); ?></button></div> 
+
+
               </div>
             </section>
             <?php endwhile; ?>
@@ -160,9 +164,8 @@
               $content = the_field('contact_form');
               my_custom_formatting($content);
               // echo $post->post_type ; ?>
-
+        
         </div>  
-
       </div>
     </section>
 

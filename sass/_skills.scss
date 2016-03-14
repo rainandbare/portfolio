@@ -10,8 +10,6 @@
 	order: -1;
 }
 
-
-
 .skillImage {
 	position: relative;
 }
@@ -65,5 +63,12 @@ div.svgImage{
 }
 
 .interests {
-	padding-top: 40px;
+	padding-top: 65px;
+}
+
+
+div.skills-interests {
+	h3 {
+		padding-bottom: 40px;
+	}
 }

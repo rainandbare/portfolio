@@ -1,4 +1,7 @@
 <footer>
+<div class="email">
+      <p>hello@suzettemccanny.com</p>
+    </div>
   <div class="container">
     <p>&copy; Suzette McCanny <?php echo date('Y'); ?></p>
     <nav class="socialNav">
