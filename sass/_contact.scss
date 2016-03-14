@@ -57,6 +57,7 @@ section.contact {
     		font-family: $robo;
     		padding: 10px;
     		transition: all 1s ease;
+    		border-radius: 0px;
 			&:focus, &:active{
 				outline: none;
 				// background-color: $middle;

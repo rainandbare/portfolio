@@ -36,7 +36,8 @@ section.piece {
 	display: flex;
 	flex-direction: row;
 	.portfolioInfo{
-		padding: 10% 5%;
+		padding: 100px;
+		padding: 60px 5%;
 		position: relative;
 		&:after{
 			content: '';
