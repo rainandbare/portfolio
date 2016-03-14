@@ -18,6 +18,7 @@ section.contact {
 .contactContent {
 	display: flex;
 	flex-direction: row;
+	background: $dark;
 	.headshot {
 		width: 40%;
 		height: auto;
@@ -41,16 +42,32 @@ section.contact {
 		p {
 			color: white;
 		}
-		background: $dark;
+		
 		input, textarea {
 			background: $dark;
 			border: none;
 			border-bottom: 1px solid white;
 			resize: none;
 			color: white;
-			margin: 30px 0px;
-			height: 20px;
-			width: 100%;
+			margin: 10px 0 20px;
+    		height: 45px;
+    		width: 100%;
+    		font-size: 3rem;
+    		font-weight: 200;
+    		font-family: $robo;
+    		padding: 10px;
+    		transition: all 1s ease;
+			&:focus, &:active{
+				outline: none;
+				// background-color: $middle;
+				border-bottom: 2px solid $accent;
+			}
+		}
+		textarea {
+			&:focus, &:active{
+				height: 135px;
+			}
+
 		}
 		input[type=submit]{
 			border-top: 1px #fff solid;
@@ -59,7 +76,44 @@ section.contact {
     		margin: 0 auto;
     		text-align: center;
     		float: right;
+    		font-size: 2rem;
+    		transition: all 1s ease;
+    		&:hover, &:focus {
+				background-color: $accent;
+				border-top: 1px $dark solid;
+				border-bottom: 1px $dark solid;
 
+    		}
+		}
+		input.submitted{
+			
+		}
+		label {
+			position: relative;
+			top:40px;
+			z-index: 5;
+			transition: all 1s ease;
+			font-size: 2.5rem;
+			}
+
+		label.hello {
+			top:0px;
+			font-size: 2rem;
 		}
 	}
 }
+
+div.wpcf7-response-output {
+	border: 2px solid black;
+	margin: 0px;
+    padding: 0px; 
+}
+span.wpcf7-not-valid-tip {
+	color: $accent;
+}
+
+
+
+
+
+

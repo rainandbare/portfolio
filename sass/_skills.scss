@@ -10,6 +10,47 @@
 	order: -1;
 
 }
+
+
+
+.skillImage {
+	position: relative;
+}
+
+.bgShape{
+	background: $accent;
+    width: 80px;
+    height: 42px;
+    position: absolute;
+    top: 43px;
+    left: 23px;
+    transform: rotate(90deg);
+
+}
+.bgShape:before {
+	content: "";
+	position: absolute;
+	top: -25px;
+	left: 0px;
+	width: 0;
+	height: 0;
+	border-left: 40px solid transparent;
+	border-right: 40px solid transparent;
+	border-bottom: 25px solid $accent;
+}
+.bgShape:after {
+	content: "";
+	position: absolute;
+	bottom: -25px;
+	left: 0px;
+	width: 0;
+	height: 0;
+	border-left: 40px solid transparent;
+	border-right: 40px solid transparent;
+	border-top: 25px solid $accent;
+}
+
+
 .skill:nth-of-type(2n+1) {
 	text-align: right;
 	justify-content: flex-end;
@@ -17,10 +58,11 @@
 
 
 div.svgImage{
-	width: 80px;
-    background: $accent;
+	width: 65px;
     margin: 30px;
     padding: 10px;
+    z-index: 4;
+    position: relative;
 }
 
 .interests {

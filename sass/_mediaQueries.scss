@@ -1,0 +1,95 @@
+@media (max-width: 660px) {
+	h1 {
+    	font-size: 5rem;
+    	padding: 0px 0 20px;	
+	}
+	header.hero {
+    	background-position: 75%;
+	}
+	nav.mainNav{
+		position: fixed;
+  		width: 100%;
+  		top: 0;
+  		z-index: 10;
+	}
+	nav.mainMenu {
+		display: none;
+		ul#menu-main-menu {
+			top: -600px;
+			transition: all 1s ease;
+
+		}
+
+	}
+	nav.socialNav {
+		display: none;
+
+	}
+	nav.mainMenu.show{
+		display: block;
+		ul#menu-main-menu {
+			flex-direction: column;
+			position: fixed;
+			background: $dark;
+			top: 60px;
+			left: 0;
+			right:0;
+			bottom:0;
+			justify-content: center;
+		}
+	}
+	.hamburger {
+		display: block;
+	}
+	section.about {
+    	padding: 80px 10px 60px;
+    	p:first-of-type {
+    		font-size: 2.2rem;
+    		line-height: 1.6;
+    	}
+	}
+	section.piece {
+		flex-direction: column;
+		.portfolioInfo{
+			width: 100%;
+			order: -1;
+			&:after{
+				display: none;
+			}
+		}
+		.portfolioImage{
+			height: 400px;
+			width: 100%;
+		}
+	}
+	div.skills-interests {
+		padding: 80px 0px
+	}
+	.skill {
+    width: 100%; 
+    float: none;
+	}
+	.contactContent {
+	flex-direction: column;
+		.form {
+    		padding: 10px;
+    		input[type=submit]{
+    			width: 100%;
+    			margin: 25px auto;
+    		}
+    		label {
+    			font-size: 2rem;
+    		}
+    	}
+	}
+	section.contact h2 {
+		padding: 50px 0 30px;
+
+	}
+}
+
+
+
+@media (max-width: 600px) {
+
+}

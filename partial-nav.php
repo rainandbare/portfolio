@@ -15,5 +15,12 @@
       'theme_location' => 'social'
     )); ?>
       </nav>
+
+  <button class="hamburger">
+  <span>toggle menu</span>
+</button>
+
   </div> <!-- /.container -->
-</nav><!--/.header-->
+
+</nav><!--/.nav-->
+

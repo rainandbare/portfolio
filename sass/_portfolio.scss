@@ -10,18 +10,25 @@ section.portfolio {
 	p, h4 {
 		padding: 0px 0px 20px 0px;
 	}
+	p  {
+		font-size: $mediumtext;
+		font-family: $robo;
+		line-height: 1.7;
+	}
 	button {
 		background: $accent;
 		color: $light;
 		border: none;
 		padding: 10px;
-		font-size: 3rem;
+		font-size: 2rem;
+		margin: 0px 10px;
 		text-transform: uppercase;
 	}
 	p.skills {
 		text-transform: uppercase;
 		font-style: italic;
 		font-family: $source-code;
+		font-size: 2rem;
 	}
 
 }

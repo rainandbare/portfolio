@@ -1,24 +1,19 @@
 <?php get_header();  ?>
 
 <?php $thumb_id = get_post_thumbnail_id(); $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true); ?>
+<div class="rearrange">
   <div class="hero">
- <header class="hero" style="background-image: url('<?php echo $thumb_url_array[0]; ?>')">
-  
-   <div class="hero-overlay">
-      <h1><?php bloginfo( 'name' ); ?></h1>
-      <h2 class="subtitle"><?php bloginfo( 'description' ); ?></h2>
-      <a class="enter" href="#about"><?php the_field('enter'); ?></a> 
-  </div>
-   
- 
-  
-</header>
+    <header class="hero" style="background-image: url('<?php echo $thumb_url_array[0]; ?>')">
+      <div class="hero-overlay">
+        <h1><?php bloginfo( 'name' ); ?></h1>
+        <h2 class="subtitle"><?php bloginfo( 'description' ); ?></h2>
+        <a class="enter" href="#about"><?php the_field('enter'); ?></a> 
+      </div>
+    </header>
    </div>
-   <div class="hero-placeholder">
-  </div>
-
+   <div class="hero-placeholder"></div>
 <?php get_template_part('partial', 'nav'); ?>
-
+</div>  
 <main>    
   
   <!-- about section -->
@@ -108,6 +103,7 @@
               <div class="svgImage">
                 <?php the_post_thumbnail(); ?>
               </div>
+              <div class="bgShape"></div>
             </div>
           </section>
             <?php endwhile; ?>
@@ -136,6 +132,7 @@
                 </div>
                 <div class="skillImage">
                   <div class="svgImage"><?php the_post_thumbnail(); ?></div>
+                  <div class="bgShape"></div>
                 </div>
               </section>
               <?php endwhile; ?>
@@ -159,8 +156,13 @@
         </div>
         <div class="form">
             <h3> <?php the_field('contact_intro'); ?></h3>
-            <?php the_field('contact_form'); ?>
-        </div>
+            <?php 
+              $content = the_field('contact_form');
+              my_custom_formatting($content);
+              // echo $post->post_type ; ?>
+
+        </div>  
+
       </div>
     </section>
 

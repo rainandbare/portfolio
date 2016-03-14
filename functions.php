@@ -297,3 +297,16 @@ function sm_get_image_url() {
 
 	endif;
 }
+
+remove_filter('the_content','wpautop');
+
+//decide when you want to apply the auto paragraph
+
+add_filter('the_content','my_custom_formatting');
+
+function my_custom_formatting($content){
+if(get_post_type()=='my_custom_post') //if it does not work, you may want to pass the current post object to get_post_type
+    return $content;//no autop
+else
+ return wpautop($content);
+}
