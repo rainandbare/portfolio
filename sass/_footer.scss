@@ -1,43 +1,42 @@
 footer {
-background: $dark;
-.email {
-	position: relative;
-	z-index: 6;
-	background: $accent;
-	display: block;
-	font-size: 40px;
-	padding: 60px 0px;
-	p {
-		text-align: center;
-		margin: 0 auto;
-		font-family: $source-code;
-		background: $dark;
-		color: $light;
-		width: 50%;
-		padding: 10px;
-	}
-}
-div.container {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	
-	color: $light;
-	ul {
-		list-style: none;
-		display: flex;
-		flex-direction: row;
-		padding-right: 40px;
-		li {
-			padding: 40px 10px;
+	background: $dark;
+	.email {
+		position: relative;
+		z-index: 6;
+		background: $accent;
+		display: block;
+		font-size: 40px;
+		padding: 60px 0px;
+		p {
+			text-align: center;
+			margin: 0 auto;
+			font-family: $source-code;
+			background: $dark;
+			color: $light;
+			width: 75%;
+			padding: 10px;
 		}
 	}
-	a {
+	div.container {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		align-items: center;
 		color: $light;
+		ul {
+			list-style: none;
+			display: flex;
+			flex-direction: row;
+			padding-right: 40px;
+			li {
+				padding: 40px 10px;
+			}
+		}
+		a {
+			color: $light;
+		}
+		p {
+			padding-left: 40px;
+		}
 	}
-	p {
-		padding-left: 40px;
-	}
-}
 }

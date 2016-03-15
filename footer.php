@@ -3,7 +3,7 @@
       <p>hello@suzettemccanny.com</p>
     </div>
   <div class="container">
-    <p>&copy; Suzette McCanny <?php echo date('Y'); ?></p>
+    <p class="copyright">&copy; Suzette McCanny <?php echo date('Y'); ?></p>
     <nav class="socialNav">
       	<?php wp_nav_menu( array(
       'container' => false,

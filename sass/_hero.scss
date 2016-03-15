@@ -1,11 +1,10 @@
-div.hero{
-	z-index: 1;
-}
+
 
 div.hero{
   position: fixed;
   width: 100%;
   top: 0;
+  z-index: 1;
 }
 
 
@@ -17,12 +16,13 @@ header.hero {
 	background-position: center;
 	min-height: 75vh;
 	position: relative;
+	width: 100%;
 }
 
 .hero-overlay {
 	background: $accent-seethrough;
 	display: flex;
-	flex-direction: column;
+	flex-flow: column wrap;
 	align-items: center;
 	justify-content: center;
 	position: absolute;
@@ -31,6 +31,7 @@ header.hero {
 	left: 0;
 	right: 0;
 	text-align: center;
+	width: 100%;
 	h2 {
 		letter-spacing: 10px;
 		padding: 0px 0px 30px 0px;

@@ -1,7 +1,6 @@
 <?php get_header();  ?>
 
 <?php $thumb_id = get_post_thumbnail_id(); $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true); ?>
-<div class="rearrange">
   <div class="hero">
     <header class="hero" style="background-image: url('<?php echo $thumb_url_array[0]; ?>')">
       <div class="hero-overlay">
@@ -13,7 +12,6 @@
    </div>
    <div class="hero-placeholder"></div>
 <?php get_template_part('partial', 'nav'); ?>
-</div>  
 <main>    
   
   <!-- about section -->

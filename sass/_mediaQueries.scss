@@ -13,8 +13,26 @@
 			}
 		}	
 	}
+	.skill p{
+		width: 300px;
+	}
 }
 
+@media (max-width: 1055px){
+	.skill p{
+		width: 150px;
+	}
+}
+
+@media (max-width: 750px){
+	.skill{
+		width: 100%;
+	    float: none;
+	}
+	.skill p {
+		width: auto;
+	}
+}
 
 
 @media (max-width: 660px) {
@@ -109,7 +127,7 @@
 		.form {
     		padding: 10px;
     		input[type=submit]{
-    			width: 100%;
+    			width: 50%;
     			margin: 25px auto;
     		}
     		label {
@@ -119,22 +137,50 @@
 	}
 	section.contact h2 {
 		padding: 48px 0 30px;
-
 	}
-}
-
-
-@media (max-width: 330px) {
 	div.hero-placeholder {
 		height: auto;
 		height: 75vh;
 	}
-	// main {
-	// 	width: 100%;
-	// 	z-index: 5;
-	// }
 	div.hero {
 		opacity: 0.99;
 	}
-
+	footer {
+		div.container {
+			flex-flow: column-reverse wrap;
+			justify-content: center;
+			ul {
+				padding-right: 0px;
+				li {
+					font-size: 40px;
+				}
+			}
+			p.copyright {
+				padding-left: 0px;
+			}
+			nav.socialNav {
+    			display: block;
+    			padding: 0px;
+				}
+			}	
+		.email{
+			padding: 25px 0;
+		 	p {
+				font-size: 2rem;
+				width: 100%;
+			}
+		}	
+	}
+	// .skill {
+ //    	padding: 0px 0px;
+	// }
+	.contactContent .headshot {
+    width: 100%; 
+    min-height: 400px;
+    background-size: cover;
+    background-position: 50% 22%;
+	}
+	.contactContent .form h3 {
+    margin: 50px 0 30px;
+	}
 }
