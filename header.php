@@ -12,6 +12,7 @@
 
 
 <body <?php body_class(); ?>>
+<div id="noScroll">
 
 
 

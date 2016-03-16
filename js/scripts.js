@@ -5,6 +5,7 @@ stickynav();
 smoothScroll();
 prettyForm();
 mobileHamburger();
+addHoverToPHP();
 });
 
 
@@ -45,9 +46,31 @@ function prettyForm(){
   });
 }
 
+function collapseMenu(){ //called in mobileHamburger()
+  $('ul#menu-main-menu a').on('click', function(){
+    var activeTF = $('.hamburger').hasClass('active');
+    if (activeTF === true) {
+      $('.hamburger').removeClass('active');
+      $('nav.mainMenu').removeClass('show');
+    } else {
+      console.log('It is closed');
+    }
+  });
+}
+
 function mobileHamburger(){
   $('.hamburger').on('click', function(){
     $(this).toggleClass('active');
     $('nav.mainMenu').toggleClass('show');
+    $('nav.mobileSocial').toggleClass('show');
+    $('body').toggleClass('controlScroll');
   });
+  //if hamburger class is active 
+  collapseMenu();
+} //end of mobileHamburger
+
+function addHoverToPHP(){
+  $('ul#menu-main-menu a').addClass('hvr-underline-from-left');
 }
+
+

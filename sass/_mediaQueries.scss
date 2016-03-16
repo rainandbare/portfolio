@@ -61,7 +61,20 @@
 	}
 	nav.socialNav {
 		display: none;
+	}
 
+	nav.mobileSocial.show {
+  		display: block;
+  		position: fixed;
+  		bottom: 20px;
+  		right: 40px;
+  		left: 40px;
+  		font-size: 3rem;
+  		ul {
+  			display: flex;
+  			flex-flow: row wrap;
+    		justify-content: space-around;
+  		}
 	}
 	nav.mainMenu.show{
 		display: block;
@@ -73,11 +86,26 @@
 			left: 0;
 			right:0;
 			bottom:0;
-			justify-content: center;
+			justify-content: flex-start;
+			overflow: hidden;
+			li:first-of-type{
+				padding-top: 20px;
+			}
+
 		}
 	}
+
+	body.controlScroll{
+		overflow-x: hidden; 
+	}
+
 	.hamburger {
 		display: block;
+	}
+
+	nav.mainNav ul#menu-main-menu li {
+    	padding: 15px 0px;
+    	font-size: 2.5rem;
 	}
 	section.about {
     	padding: 80px 10px 60px;
@@ -87,7 +115,7 @@
     	}
 	}
 	section.piece {
-		flex-direction: column;
+		display: block;		
 		.portfolioInfo{
 			width: 100%;
 			order: -1;
@@ -96,7 +124,7 @@
 			}
 		}
 		.portfolioImage{
-			height: 400px;
+			height: 200px;
 			width: 100%;
 			margin: -1px 0px;
 		}
@@ -107,7 +135,7 @@
 	}
     	
     .skill {
-		width: 80%;
+		width: 88%;
 		padding: 10px 0px;
 		.skillInfo {
 			width: 80%;
@@ -116,14 +144,18 @@
 		
 		.skillImage {
 			width: 20%;
+
 		}
 	}
-		.skill:nth-of-type(2n) .skillInfo{
-			padding-left: 70px;
-			margin-right: auto;
-		}
+	.skill:nth-of-type(2n){
+		margin-left: 8%;
+	}
+
+	.interests .skill {
+		margin: -20px 0px;
+	}
 	.contactContent {
-	flex-direction: column;
+		display: block;
 		.form {
     		padding: 10px;
     		input[type=submit]{
@@ -135,7 +167,7 @@
     		}
     	}
 	}
-	section.contact h2 {
+	section.contact h2, section.portfolio h2 {
 		padding: 48px 0 30px;
 	}
 	div.hero-placeholder {
@@ -171,9 +203,6 @@
 			}
 		}	
 	}
-	// .skill {
- //    	padding: 0px 0px;
-	// }
 	.contactContent .headshot {
     width: 100%; 
     min-height: 400px;
@@ -184,3 +213,41 @@
     margin: 50px 0 30px;
 	}
 }
+
+@media (max-width: 550px) {
+	.skill .skillInfo {
+    padding-left: 45px;
+}
+}
+
+@media (max-width: 450px) {
+	.skill:nth-of-type(2n) {
+		margin-left: 0px;
+	}
+}
+
+@media (max-width: 375px) {
+	.skill {
+	    width: 75%;
+	    padding: 0px 0;
+	    .skillInfo {
+	    	padding-left: 70px;
+		}
+	}
+	.portfolioInfo {
+		height: auto;
+	}
+	h2 {
+    	font-size: 1.7rem;
+	}
+	h1 {
+    	font-size: 4rem;
+    	padding: 60px 0 10px;
+	}
+
+
+}
+
+
+
+

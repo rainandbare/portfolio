@@ -23,6 +23,9 @@ nav.mainNav {
 	a {
 		color: $light;
 		text-transform: uppercase;
+    i {
+      transition: all 0.7s ease;
+    }
 	}
 	ul#menu-main-menu, ul#menu-social-menu {
 		transition: background 1s ease;
@@ -36,7 +39,18 @@ nav.mainNav {
     &:first-of-type{
       padding-left: 0px;
     }
+    a {
+      padding-bottom: 2px;
+    }
   }
+}
+
+nav.mainNav nav.socialNav li:hover i {
+  color: $accentLight;
+}
+
+nav.mobileSocial {
+  display: none;
 }
 
 nav.mainNavScrolled {
@@ -46,8 +60,8 @@ nav.mainNavScrolled {
   z-index: 999999;
 }
 main {
-	position: relative;
-	z-index: 2;
+  position: relative;
+  z-index: 2;
 }
 
 

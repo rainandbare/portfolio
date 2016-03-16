@@ -6,7 +6,7 @@
       <div class="hero-overlay">
         <h1><?php bloginfo( 'name' ); ?></h1>
         <h2 class="subtitle"><?php bloginfo( 'description' ); ?></h2>
-        <a class="enter" href="#about"><?php the_field('enter'); ?></a> 
+        <a class="enter hvr-underline-from-left" href="#about"><?php the_field('enter'); ?></a> 
       </div>
     </header>
    </div>
@@ -39,6 +39,7 @@
 
     <!-- portfolio section -->
     <section class="portfolio" id="portfolio">
+      <h2><?php the_field('portfolio_title'); ?></h2>
           <!-- new portfolio query -->
           <?php
             $portfolioQuery = new WP_Query(
@@ -68,8 +69,8 @@
                     <?php endif; ?></p>
 
                 <div class="buttons">   
-                <button class="git" href="<?php the_field('git_link'); ?>"><?php the_field('git_placeholder'); ?></button>
-                <button class="live" href="<?php the_field('live_link'); ?>"> <?php the_field('live_placeholder'); ?></button></div> 
+                <button class="git hvr-underline-from-left" href="<?php the_field('git_link'); ?>"><?php the_field('git_placeholder'); ?></button>
+                <button class="live hvr-underline-from-left" href="<?php the_field('live_link'); ?>"> <?php the_field('live_placeholder'); ?></button></div> 
 
 
               </div>

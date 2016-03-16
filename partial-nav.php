@@ -8,6 +8,7 @@
       'container' => false,
       'theme_location' => 'primary'
     )); ?>
+        
       </nav>
       <nav class="socialNav">
       	<?php wp_nav_menu( array(
@@ -15,10 +16,15 @@
       'theme_location' => 'social'
     )); ?>
       </nav>
-
+      <nav class="mobileSocial">
+          <?php wp_nav_menu( array(
+        'container' => false,
+        'theme_location' => 'social'
+      )); ?>
+        </nav>
   <button class="hamburger">
-  <span>toggle menu</span>
-</button>
+    <span>toggle menu</span>
+  </button>
 
   </div> <!-- /.container -->
 

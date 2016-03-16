@@ -83,6 +83,10 @@ section.piece {
 			h4 {
 				color: $dark;
 			}
+			button.hvr-underline-from-left:before {
+				background: $dark;
+				height: 3px;
+			}
 			p {
 				color: $light;
 			}
@@ -101,6 +105,10 @@ section.piece {
 			}
 			h4 {
 				color: $middle;
+			}
+			button.hvr-underline-from-left:before {
+				background: $dark;
+				height: 3px;
 			}
 			p {
 				color: $dark;
@@ -121,6 +129,10 @@ section.piece {
 			}
 			h4, button {
 				color: $light;
+			}
+			button.hvr-underline-from-left:before {
+				background: $light;
+				height: 3px;
 			}
 			p {
 				color: $middle;

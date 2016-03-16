@@ -1,7 +1,9 @@
 <footer>
+<a href="mailto:hello@suzettemccanny.com">
 <div class="email">
       <p>hello@suzettemccanny.com</p>
     </div>
+</a>
   <div class="container">
     <p class="copyright">&copy; Suzette McCanny <?php echo date('Y'); ?></p>
     <nav class="socialNav">
@@ -23,5 +25,6 @@
 </script>
 
 <?php wp_footer(); ?>
+</div> <!-- noScroll -->
 </body>
 </html>

@@ -12,6 +12,7 @@
 // google fonts
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,700|Source+Code+Pro:400,200);
 
+
 $robo: 'Roboto', serif;   
 $source-code: 'Source Code Pro', sans-serif;
 
@@ -20,7 +21,8 @@ $accent-seethrough: RGBA(226, 33, 99, 0.8);
 $accentLight: RGBA(235, 99, 148, 1);
 $accentLight-seethrough: RGBA(235, 99, 148, 0.8);
 $accentDark: RGBA(189, 27, 93, 1);
-$dark: black;
+$dark: RGBA(20, 20, 20, 1);
+$black: black;
 $light: white;
 $middle: RGBA(97, 97, 97, 1);
 
@@ -56,8 +58,12 @@ img {
 body {
 	font-family: $robo;
 	background-color: black;
-
 }
+
+a {
+	outline: 0;
+}
+
 
 section.about, div.skills-interests {
 	background: white;
@@ -81,12 +87,12 @@ h1 {
 	letter-spacing: 4px;
 	color: white;
 	padding: 190px 0px 20px 0px;
-	text-shadow: -6px 3px 1px black;
+	text-shadow: -6px 3px 1px $dark;
 }
 
 h2 {
 	font-size: $largetext;
-	color: black;
+	color: $dark;
 	font-weight: 400;
 }
 
@@ -100,6 +106,67 @@ h3 {
 }
 .form h3 {
 	text-transform: uppercase;
+}
+
+
+/* Underline From Left */
+.hvr-underline-from-left {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background: $light;
+  height: 1px;
+  transition-property: right;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-left:hover:before, 
+.hvr-underline-from-left:focus:before, 
+.hvr-underline-from-left:active:before {
+  right: 0;
+}
+
+/* Underline From Center */
+.hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  backface-visibility: hidden;
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background: $light;
+  height: 1px;
+  transition-property: left, right;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-center:hover:before, 
+.hvr-underline-from-center:focus:before, 
+.hvr-underline-from-center:active:before {
+  left: 0;
+  right: 0;
 }
 
 @import 'navigation';
