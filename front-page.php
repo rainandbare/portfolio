@@ -40,7 +40,8 @@
 
 
     <!-- portfolio section -->
-    <section class="portfolio scrollSection" id="portfolio">
+    <section id="portfolio">
+    <section class="portfolio">
       <h2><?php the_field('portfolio_title'); ?></h2>
           <!-- new portfolio query -->
           <?php
@@ -159,7 +160,8 @@
               [stuff that happens if there aren't any posts]
             <?php endif; ?>
     </section> <!-- end of interests -->
-    </div>
+    </div> <!-- end of skills-interests -->
+    </section> <!-- end of portfolio -->
 
 
 

@@ -98,7 +98,7 @@ function focusStatesOnScroll(){
         aArray.push(ahref);
 
     } // this for loop fills the aArray with attribute href values
-    aArray.splice(3,1);
+    // aArray.splice(3,1);
     console.log(aArray);
     $(window).scroll(function(){
         var windowPos = $(window).scrollTop(); // get the offset of the window from the top of page
@@ -109,6 +109,7 @@ function focusStatesOnScroll(){
             var theID = aArray[i];
             console.log(theID);
             var divPos = $(theID).offset().top; // get the offset of the div from the top of page
+            divPos -= 250;
             var divHeight = $(theID).height(); // get the height of the div in question
             console.log(divPos, divHeight);
             if (windowPos >= divPos && windowPos < (divPos + divHeight)) {
