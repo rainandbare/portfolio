@@ -34,16 +34,21 @@ nav.mainNav {
 			padding: 0px 10px;
 		}
 	}
-  ul#menu-main-menu li {
+  ul#menu-main-menu {
+    .nav-active:before{
+      right: 0;
+    }
+    li {
     padding: 0px 36px;
     &:first-of-type{
       padding-left: 0px;
-    }
-    a {
+      }
+      a {
       padding-bottom: 2px;
+      }
     }
   }
-}
+}  
 
 nav.mainNav nav.socialNav li:hover i {
   color: $accentLight;

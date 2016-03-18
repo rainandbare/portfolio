@@ -113,9 +113,11 @@ section.contact	h2, section.portfolio h2 {
 
 
 div.wpcf7-response-output {
-	border: 2px solid black;
-	margin: 0px;
-    padding: 0px; 
+	border: 2px solid #fff;
+    color: white;
+    padding: 32px;
+    margin: 65px 20px;
+    font-weight: 300;
 }
 span.wpcf7-not-valid-tip {
 	color: $accent;

@@ -5,7 +5,7 @@
 */
 
 get_header();  ?>
-
+<?php get_template_part('partial', 'nav'); ?>
 <div class="main">
   <div class="container">
     <?php // Start the loop ?>

@@ -12,6 +12,7 @@
 
 .skillImage {
 	position: relative;
+
 }
 
 .bgShape{
@@ -22,7 +23,6 @@
     top: 43px;
     left: 23px;
     transform: rotate(90deg);
-
 }
 .bgShape:before {
 	content: "";
@@ -69,6 +69,6 @@ div.svgImage{
 
 div.skills-interests {
 	h3 {
-		padding-bottom: 40px;
+		padding-bottom: 3px;
 	}
 }

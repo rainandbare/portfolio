@@ -1,23 +1,25 @@
 <?php get_header();  ?>
-
-<?php $thumb_id = get_post_thumbnail_id(); $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true); ?>
-  <div class="hero">
-    <header class="hero" style="background-image: url('<?php echo $thumb_url_array[0]; ?>')">
-      <div class="hero-overlay">
-        <h1><?php bloginfo( 'name' ); ?></h1>
-        <h2 class="subtitle"><?php bloginfo( 'description' ); ?></h2>
-        <a class="enter hvr-underline-from-left" href="#about"><?php the_field('enter'); ?></a> 
-      </div>
-    </header>
-   </div>
-   <div class="hero-placeholder"></div>
+<section id="home" class="scrollSection">
+  <?php $thumb_id = get_post_thumbnail_id(); $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true); ?>
+    <div class="hero">
+      <header class="hero" style="background-image: url('<?php echo $thumb_url_array[0]; ?>')">
+        <div class="hero-overlay">
+          <h1><?php bloginfo( 'name' ); ?></h1>
+          <h2 class="subtitle"><?php bloginfo( 'description' ); ?></h2>
+          <a class="enter hvr-underline-from-left" href="#about"><?php the_field('enter'); ?></a> 
+        </div>
+      </header>
+     </div>
+     <div class="hero-placeholder"></div>
+</section>
 <?php get_template_part('partial', 'nav'); ?>
 <main>    
   
   <!-- about section -->
-  <section class="about" id='about'>
+  <section class="about scrollSection" id='about'>
     <div class="container">
       <h3><?php the_field('about_title'); ?></h3>
+      <h5><?php the_field('about_subtitle'); ?></h5>
         <!-- new about query -->
         <?php $aboutQuery = new WP_Query(
           array(
@@ -38,7 +40,7 @@
 
 
     <!-- portfolio section -->
-    <section class="portfolio" id="portfolio">
+    <section class="portfolio scrollSection" id="portfolio">
       <h2><?php the_field('portfolio_title'); ?></h2>
           <!-- new portfolio query -->
           <?php
@@ -69,8 +71,17 @@
                     <?php endif; ?></p>
 
                 <div class="buttons">   
-                <button class="git hvr-underline-from-left" href="<?php the_field('git_link'); ?>"><?php the_field('git_placeholder'); ?></button>
-                <button class="live hvr-underline-from-left" href="<?php the_field('live_link'); ?>"> <?php the_field('live_placeholder'); ?></button></div> 
+                  <button class="git hvr-underline-from-left">
+                    <a href="<?php the_field('github_link'); ?>" target="_blank">
+                      <?php the_field('git_placeholder'); ?>
+                    </a>
+                  </button>
+                  <button class="live hvr-underline-from-left">
+                    <a href="<?php the_field('live_link'); ?>" target="_blank">
+                      <?php the_field('live_placeholder'); ?>
+                    </a>
+                  </button>
+                </div> 
 
 
               </div>
@@ -86,6 +97,7 @@
 <div class="skills-interests">
     <section class="skills clearfix">
         <h3><?php the_field('skills_title'); ?></h3>
+        <h5><?php the_field('skills_subtitle'); ?></h5>
 
         <?php
           $skillsQuery = new WP_Query(
@@ -119,6 +131,7 @@
           <!-- Interests  -->
     <section class="interests clearfix">
         <h3><?php the_field('interests_title'); ?></h3>
+         <h5><?php the_field('interests_subtitle'); ?></h5>
 
           <?php
           $interestQuery = new WP_Query(
@@ -136,7 +149,7 @@
                 <div class="skillImage">
                   <div class="svgImage"><?php the_post_thumbnail(); ?></div>
                   <div class="bgShape"></div>
-                </div>
+                </div> 
               </section>
               <?php endwhile; ?>
 
@@ -151,7 +164,7 @@
 
 
     <!-- Contact  -->
-    <section class="contact" id="contact">
+    <section class="contact scrollSection" id="contact">
     <h2><?php the_field('contact_title'); ?></h2>
       <div class="contactContent">
         <div class="headshot" style="background-image: url(<?php the_field('contact_image'); ?> );">
